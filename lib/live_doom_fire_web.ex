@@ -28,8 +28,9 @@ defmodule LiveDoomFireWeb do
 
   def view do
     quote do
-      use Phoenix.View, root: "lib/live_doom_fire_web/templates",
-                        namespace: LiveDoomFireWeb
+      use Phoenix.View,
+        root: "lib/live_doom_fire_web/templates",
+        namespace: LiveDoomFireWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 2, view_module: 1]
@@ -40,6 +41,7 @@ defmodule LiveDoomFireWeb do
       import LiveDoomFireWeb.Router.Helpers
       import LiveDoomFireWeb.ErrorHelpers
       import LiveDoomFireWeb.Gettext
+      import Phoenix.LiveView, only: [live_render: 2, live_render: 3]
     end
   end
 
@@ -48,6 +50,7 @@ defmodule LiveDoomFireWeb do
       use Phoenix.Router
       import Plug.Conn
       import Phoenix.Controller
+      import Phoenix.LiveView.Router
     end
   end
 
