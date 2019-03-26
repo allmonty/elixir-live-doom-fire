@@ -16,7 +16,8 @@ use Mix.Config
 config :live_doom_fire, LiveDoomFireWeb.Endpoint,
   load_from_system_env: true,
   url: [host: "example.com", port: 80],
-  cache_static_manifest: "priv/static/cache_manifest.json"
+  cache_static_manifest: "priv/static/cache_manifest.json",
+  secret_key_base: "LlLusrsev+N/pD3M1aSvob6+eNLPKvjWRyOwvLAynxARkokHj6C+EXDTBOM8MsyT"
 
 # Do not print debug messages in production
 config :logger, level: :info
@@ -59,6 +60,14 @@ config :logger, level: :info
 #     config :live_doom_fire, LiveDoomFireWeb.Endpoint, server: true
 #
 
+# Configure your database
+config :live_doom_fire, LiveDoomFire.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
+  database: "live_doom_fire_prod",
+  pool_size: 15
+
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
-import_config "prod.secret.exs"
+# import_config "prod.secret.exs"
