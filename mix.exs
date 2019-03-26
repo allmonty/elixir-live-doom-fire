@@ -43,7 +43,8 @@ defmodule LiveDoomFire.Mixfile do
       {:cowboy, "~> 1.0"},
       {:plug_cowboy, "~> 1.0"},
       {:jason, "~> 1.0"},
-      {:phoenix_live_view, github: "phoenixframework/phoenix_live_view"}
+      {:phoenix_live_view, github: "phoenixframework/phoenix_live_view"},
+      {:distillery, "~> 1.5.5"}
     ]
   end
 
