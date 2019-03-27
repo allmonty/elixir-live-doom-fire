@@ -1,4 +1,11 @@
-# LiveDoomFire
+# Doom Fire
+
+![](doom_fire.gif)
+
+DOOM fire animated from server side.
+
+Made with [Phoenix LiveView](https://github.com/phoenixframework/phoenix_live_view)<br>
+Based on [Doom fire algorithm](https://github.com/filipedeschamps/doom-fire-algorithm)
 
 To start your Phoenix server:
 
@@ -8,8 +15,6 @@ To start your Phoenix server:
   * Start Phoenix endpoint with `mix phx.server`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
 
 ## Learn more
 
