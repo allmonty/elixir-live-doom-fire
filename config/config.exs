@@ -10,7 +10,7 @@ config :live_doom_fire, LiveDoomFireWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "gyUjOdfii8foS3z6mxtEreHhh7MRiTPsfKyYY1wS/CYhYk0nqKqTKDSQcla1+jCD",
   render_errors: [view: LiveDoomFireWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: LiveDoomFire.PubSub, adapter: Phoenix.PubSub.PG2],
+  pubsub_server: LiveDoomFire.PubSub,
   live_view: [signing_salt: "R0QeR4t0JhxQy4aWZ71cnY8GCJSBf7bn"]
 
 # Configures Elixir's Logger

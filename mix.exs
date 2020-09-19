@@ -5,7 +5,14 @@ defmodule LiveDoomFire.Mixfile do
     [
       app: :live_doom_fire,
       version: "0.0.1",
-      elixir: "~> 1.4",
+      elixir: "~> 1.10",
+      description: "Demo of using LiveView to render DOOM's fire",
+      package: [
+        licenses: ["MIT"],
+        links: [],
+      ],
+      build_embedded: Mix.env == :prod,
+      start_permanent: Mix.env == :prod,
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
@@ -33,16 +40,16 @@ defmodule LiveDoomFire.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.4", override: true},
-      {:phoenix_pubsub, "~> 1.0"},
-      {:phoenix_html, "~> 2.10"},
-      {:phoenix_live_reload, "~> 1.0", only: :dev},
-      {:gettext, "~> 0.11"},
-      {:cowboy, "~> 1.0"},
-      {:plug_cowboy, "~> 1.0"},
-      {:jason, "~> 1.0"},
-      {:phoenix_live_view, github: "phoenixframework/phoenix_live_view"},
-      {:distillery, "~> 1.5.5"}
+      {:phoenix, "~> 1.5"},
+      {:phoenix_pubsub, "~> 2.0"},
+      {:plug_cowboy, "~> 2.3"},
+      {:phoenix_html, "~> 2.14"},
+      {:phoenix_live_reload, "~> 1.2", only: :dev},
+      {:gettext, "~> 0.18"},
+      {:cowboy, "~> 2.8"},
+      {:jason, "~> 1.2"},
+      {:phoenix_live_view, "~> 0.14"},
+      {:distillery, "~> 1.5"}
     ]
   end
 

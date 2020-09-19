@@ -1,1 +1,1 @@
-web: MIX_ENV=prod mix phx.server
+web: _build/prod/rel/live_doom_fire/bin/live_doom_fire start

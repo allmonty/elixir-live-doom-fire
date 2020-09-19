@@ -2,7 +2,7 @@ defmodule LiveDoomFireWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :live_doom_fire
 
   socket("/socket", LiveDoomFireWeb.UserSocket,
-    websocket: true,
+    websocket: [timeout: 45_000],
     longpoll: false
   )
 

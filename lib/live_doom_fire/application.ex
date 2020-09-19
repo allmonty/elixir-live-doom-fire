@@ -5,7 +5,8 @@ defmodule LiveDoomFire.Application do
     import Supervisor.Spec
 
     children = [
-      supervisor(LiveDoomFireWeb.Endpoint, [])
+      supervisor(LiveDoomFireWeb.Endpoint, []),
+      {Phoenix.PubSub, [name: LiveDoomFire.PubSub, adapter: Phoenix.PubSub.PG2]}
     ]
 
     opts = [strategy: :one_for_one, name: LiveDoomFire.Supervisor]
